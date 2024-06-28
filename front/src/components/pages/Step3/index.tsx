@@ -4,6 +4,8 @@ import axios from 'axios';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
 import { SelectOption } from '../../SelectOption';
+import './Step3.css'
+
 
 function Form3() {
   const navigate = useNavigate()
@@ -30,12 +32,15 @@ function Form3() {
         <p>Preecha o campo abaixo.</p>
 
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className='container'>
             <SelectOption
               title="Masculino"
             />
             <SelectOption
               title="Feminino"
+            />
+            <SelectOption
+              title="Outro"
             />
           </div>
           <button type="submit">Próximo</button>

@@ -3,3 +3,7 @@
     color:#fff;
     background-color: #fff;
 }
+.container label{
+    margin: 0;
+    padding-right: 95px;
+}
