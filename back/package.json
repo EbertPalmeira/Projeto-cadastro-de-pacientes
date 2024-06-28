@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3",
+    "mysql2": "^3.10.1",
+    "nodemon": "^3.1.4"
+  },
+  "name": "back",
+  "version": "1.0.0",
+  "description": "Projeto ubs",
+  "main": "app.js",
+  "scripts": {
+    "dev":"nodemon",
+    "test": "express, react , typescript,tsx,jsx,mysql"
+  },
+  "author": "Ebert",
+  "license": "ISC"
+}
