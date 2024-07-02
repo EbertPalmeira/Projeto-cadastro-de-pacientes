@@ -3,9 +3,9 @@ export const Container = styled.div<{selected:boolean;}>`
     display:flex;
     border:2px solid ${props=>props.selected? '#25cd89':'#16195c'};
     border-radius:10px;
-    padding:20px;
+    padding:15px;
     margin-bottom:15px;
-    aling-items:center;
+    justify-content:center ;
     cursor:pointer;
 
     &:hover{
@@ -16,7 +16,6 @@ export const Container = styled.div<{selected:boolean;}>`
 `;
 export const Info =styled.div`
     flex:1;
-    margin-left:20px;
 
 
 `;

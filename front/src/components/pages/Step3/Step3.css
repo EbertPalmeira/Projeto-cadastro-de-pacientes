@@ -3,4 +3,22 @@
     grid-template-columns: repeat(3,200px);
      gap: 30px;
      text-align: center;
+     
 }
+.container button{
+    padding:20px;
+    cursor:pointer;
+    margin-top:10px;
+    background-color:#02044a;
+    font-weight:bold;
+    font-size:14px;
+    color:#fff;
+    border: 2px solid #16195c;
+    
+    border-radius:10px;
+}
+
+button.selected {
+    background-color: #25cd89;
+    color: white;
+  }

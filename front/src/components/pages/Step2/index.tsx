@@ -6,8 +6,10 @@ import * as C from './styles';
 
 const Form2: React.FC = () => {
   const [idade, setIdade] = useState('');
+
   const location = useLocation();
   const navigate = useNavigate();
+  
   const { nome } = location.state as { nome: string };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {

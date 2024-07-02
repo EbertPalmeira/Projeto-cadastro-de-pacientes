@@ -3,18 +3,26 @@ import { useNavigate ,useLocation} from 'react-router-dom';
 import axios from 'axios';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
-import { SelectOption } from '../../SelectOption';
 import './Step3.css'
 
 
 function Form3() {
   const navigate = useNavigate()
+
   const [sexo, setSexo] = useState('');
   const location = useLocation();
 
-  const { nome,idade } = location.state as { nome: string ,idade: string};
+  const { nome , idade } = location.state as { nome: string ,idade: string};
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+
+  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const button = event.currentTarget;
+    const buttonValue = button.value;
+      setSexo(buttonValue);
+    
+  };
+  
+  const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/pacientes', { nome, idade,sexo });
@@ -22,6 +30,10 @@ function Form3() {
     } catch (error) {
       console.error('Erro ao enviar os dados', error);
     }
+    console.log(sexo);
+    
+    
+
   };
 
   return (
@@ -31,20 +43,21 @@ function Form3() {
         <h1>Agora vamos inserir o sexo do paciente.</h1>
         <p>Preecha o campo abaixo.</p>
 
-        <form onSubmit={handleSubmit}>
+
           <div className='container'>
-            <SelectOption
-              title="Masculino"
-            />
-            <SelectOption
-              title="Feminino"
-            />
-            <SelectOption
-              title="Outro"
-            />
+            <button className={sexo ==="Masculino"? 'selected':''} value="Masculino" onClick={handleButtonClick}>
+              Masculino
+            </button>
+            <button className={sexo ==="Feminino"? 'selected':''} value="Feminino" onClick={handleButtonClick}>
+              Feminino
+            </button>
+            <button className={sexo === "Outro" ? 'selected' : ''} value="Outro" onClick={handleButtonClick}>
+              Outro
+            </button>
+            
           </div>
-          <button type="submit">Próximo</button>
-        </form>
+          <button className='btn' onClick={handleSubmit}>Próximo</button>
+        
     </C.Container>
     </Theme>
   );

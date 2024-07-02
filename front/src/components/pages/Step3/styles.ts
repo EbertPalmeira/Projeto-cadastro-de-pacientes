@@ -17,7 +17,7 @@ export const Container = styled.div`
         margin:30px 0;
     }
     
-    button{
+    .btn{
         background-color:#25cd89;
         color:#fff;
         cursor:pointer;
@@ -33,5 +33,10 @@ export const Container = styled.div`
         text-decoration:none;
         padding:20px 40px;
         color:#FFF;
+    }
+   
+        
+
+    
     }
 `;
