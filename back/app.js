@@ -29,16 +29,16 @@ db.connect(err => {
 
 // Rota POST para receber dados do React
 app.post('/api/pacientes', (req, res) => {
-  const { nome, idade,sexo } = req.body;
+  const { nome, idade,sexo,numCartaoSUS } = req.body;
 
-  const query = 'INSERT INTO pacientes (nome, idade,sexo) VALUES (?, ?,?)';
+  const query = 'INSERT INTO pacientes (nome, idade,sexo,numCartaoSUS) VALUES (?, ?, ? , ?)';
   
-  db.query(query, [nome, idade,sexo], (err, results) => {
+  db.query(query, [nome, idade,sexo,numCartaoSUS], (err, results) => {
     if (err) {
       console.error('Erro ao inserir no banco de dados:', err);
       return res.status(500).json({ error: err.message });
     }
-    res.status(201).json({ id: results.insertId, nome, idade ,sexo});
+    res.status(201).json({ id: results.insertId, nome, idade ,sexo , numCartaoSUS});
   });
 });
 

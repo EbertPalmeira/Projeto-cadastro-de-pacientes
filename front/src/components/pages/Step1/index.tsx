@@ -30,6 +30,7 @@ function Form1() {
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
                 required
+                placeholder='Informe o nome completo do paciente'
             />
             </label>
         </div>

@@ -24,16 +24,8 @@ function Form3() {
   
   const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
-    try {
-      await axios.post('http://localhost:5000/api/pacientes', { nome, idade,sexo });
-      
-    } catch (error) {
-      console.error('Erro ao enviar os dados', error);
-    }
-    console.log(sexo);
-    
-    
-
+    navigate('/step4',{state:{nome, idade,sexo}})
+  
   };
 
   return (
@@ -51,8 +43,14 @@ function Form3() {
             <button className={sexo ==="Feminino"? 'selected':''} value="Feminino" onClick={handleButtonClick}>
               Feminino
             </button>
+            <button className={sexo === "trans" ? 'selected' : ''} value="trans" onClick={handleButtonClick}>
+              Transgênero
+            </button>
+            <button className={sexo === "nao-binario" ? 'selected' : ''} value="nao-binario" onClick={handleButtonClick}>
+              Não-binário
+            </button>
             <button className={sexo === "Outro" ? 'selected' : ''} value="Outro" onClick={handleButtonClick}>
-              Outro
+              Prefere não informar
             </button>
             
           </div>
