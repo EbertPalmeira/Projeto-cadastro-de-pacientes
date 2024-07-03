@@ -45,4 +45,9 @@ export const Container = styled.div`
         border-radius:30px;
         margin-top:30px;
     }
+        .btn-pag{
+            display:flex;
+            gap:30px;
+        
+        }
 `;

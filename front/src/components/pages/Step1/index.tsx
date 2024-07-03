@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
-
+import Swal from 'sweetalert2';
 
 function Form1() {
   const navigate = useNavigate()
@@ -10,6 +10,15 @@ function Form1() {
 
 
   const handleNext = () => {
+    if( nome === ""){
+      Swal.fire({
+        title: 'Alerta!',
+        text: 'Informe o nome completo do paciente',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      });
+      return
+    }
    navigate('/step2',{state:{nome}});
   };
 
