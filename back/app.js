@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',        // ajuste conforme suas credenciais
-  password: 'Ebert@123', // ajuste conforme suas credenciais
+  password: 'ebert123', // ajuste conforme suas credenciais
   database: 'projeto'
 });
 
