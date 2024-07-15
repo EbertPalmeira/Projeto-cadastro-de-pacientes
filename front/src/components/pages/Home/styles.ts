@@ -17,5 +17,10 @@ export const Div = styled.div`
     justify-content:center;
     border:2px solid red;
     justify-content: center;
+    gap:100px;
+
+    img{
+        width:250px;
+    }
 `;
 
