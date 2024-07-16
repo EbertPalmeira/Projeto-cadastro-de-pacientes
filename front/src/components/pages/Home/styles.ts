@@ -15,12 +15,24 @@ export const Div = styled.div`
     display:grid;
     grid-template-columns:repeat(2,200px);
     justify-content:center;
-    border:2px solid red;
     justify-content: center;
-    gap:100px;
+    gap:300px;
+     padding: 10px;
+     margin-top:30px;
 
     img{
-        width:250px;
+        width:300px;
+    }
+        button{
+        background-color:#25cd89;
+        color:#fff;
+        cursor:pointer;
+        font-size:14px;
+        font-weight:bold;
+        padding:20px 40px;
+        border:0px;
+        border-radius:30px;
+        margin-top:30px;
     }
 `;
 
