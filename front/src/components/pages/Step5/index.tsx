@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import { Theme } from '../../../Theme';
-import * as C from '../Step4/styles';
+import * as C from './styles';
 import  axios  from "axios";
 import Swal from 'sweetalert2';
 
@@ -19,7 +19,7 @@ function Form5() {
     event.preventDefault();
 
     try {
-      await axios.post('http://localhost:5000/api/pacientes', { nome, idade,sexo,numCartaoSUS });
+      await axios.post('http://localhost:5000/api/pacientes', { nome, idade ,sexo,numCartaoSUS ,motivoConsulta});
       
     } catch (error) {
       console.error('Erro ao enviar os dados', error);
@@ -29,7 +29,7 @@ function Form5() {
   };
 
   const handleBack=()=>{
-    navigate('/step4')
+    // navigate('/step6')
   }
 
   return (
@@ -44,17 +44,18 @@ function Form5() {
         <div>
             <label>
             Motivo da consulta.
-            <input
-                type="text"
+            <textarea
                 value={motivoConsulta}
                 onChange={(e) => setMotivoConsulta(e.target.value)}
                 placeholder='Informe o motivo da consulta'
+                required 
+
             />
             </label>
         </div>
         <div className='btn-pag'>
             <button type="submit">Próximo</button>
-            <button onClick={handleBack}>Voltar</button>
+            <button >Voltar</button>
         </div>
         </form>
        

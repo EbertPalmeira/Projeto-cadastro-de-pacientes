@@ -32,6 +32,8 @@ export const Container = styled.div`
             outline:0;
             font-size:15px;
             background-color:#02044a;
+            resize: 'vertical'
+            
         }
     }
     button{

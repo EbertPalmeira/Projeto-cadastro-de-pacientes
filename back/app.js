@@ -14,8 +14,8 @@ app.use(bodyParser.json());
 // Conectar ao banco de dados MySQL
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',        // ajuste conforme suas credenciais
-  password: 'ebert123', // ajuste conforme suas credenciais
+  user: 'root',        
+  password: 'Ebert@123', 
   database: 'projeto'
 });
 
@@ -29,16 +29,16 @@ db.connect(err => {
 
 // Rota POST para receber dados do React
 app.post('/api/pacientes', (req, res) => {
-  const { nome, idade,sexo,numCartaoSUS } = req.body;
+  const { nome, idade,sexo,numCartaoSUS,motivoConsulta } = req.body;
 
-  const query = 'INSERT INTO pacientes (nome, idade,sexo,numCartaoSUS) VALUES (?, ?, ? , ? )';
+  const query = 'INSERT INTO pacientes (nome, idade,sexo,numCartaoSUS,motivoConsulta) VALUES (?, ?, ? , ? , ? )';
   
-  db.query(query, [nome, idade,sexo ,numCartaoSUS], (err, results) => {
+  db.query(query, [nome, idade,sexo ,numCartaoSUS ,motivoConsulta], (err, results) => {
     if (err) {
       console.error('Erro ao inserir no banco de dados:', err);
       return res.status(500).json({ error: err.message });
     }
-    res.status(201).json({ id: results.insertId, nome, idade ,sexo,numCartaoSUS });
+    res.status(201).json({ id: results.insertId, nome, idade ,sexo,numCartaoSUS ,motivoConsulta });
   });
 });
 

@@ -21,12 +21,13 @@ function Form1() {
 
   const handleNext  = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    try {
-      await axios.post('http://localhost:5000/api/pacientes', { nome, idade ,sexo,numCartaoSUS });
+    navigate('/step5',{state:{nome,idade,sexo,numCartaoSUS}})
+    // try {
+    //   await axios.post('http://localhost:5000/api/pacientes', { nome, idade ,sexo,numCartaoSUS });
       
-    } catch (error) {
-      console.error('Erro ao enviar os dados', error);
-    }
+    // } catch (error) {
+    //   console.error('Erro ao enviar os dados', error);
+    // }
   
   };
 

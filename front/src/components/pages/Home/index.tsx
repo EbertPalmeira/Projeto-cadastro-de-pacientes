@@ -3,9 +3,17 @@ import * as C from './styles';
 import imgCadastro from '../../../imgs/cadastro.jpg'
 import imgVer from '../../../imgs/images.jpeg'
 import "./style.css"
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const Cadastro=()=>{
+    navigate("/step1")
+  }
+
   return (
     <div>
         <C.Container>
@@ -17,7 +25,7 @@ const Home = () => {
                     <img src={imgCadastro} alt=""  />
                     <p>Este campo é destinado ao cadastro de pacientes.</p>
                     <div>
-                      <button>Cadastrar pacientes</button>
+                      <button onClick={Cadastro}>Cadastrar pacientes</button>
                     </div>
                     
                   </div>

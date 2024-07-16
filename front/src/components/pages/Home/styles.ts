@@ -33,6 +33,11 @@ export const Div = styled.div`
         border:0px;
         border-radius:30px;
         margin-top:30px;
+        transition:0.5s;
     }
+        button:hover{
+                background-color:#2F4F4F;
+
+        }
 `;
 

@@ -5,6 +5,7 @@ import Form3 from './components/pages/Step3';
 import { useState } from 'react';
 import Form4 from './components/pages/Step4';
 import Form5 from './components/pages/Step5';
+import Home from './components/pages/Home';
 
 
 
@@ -14,7 +15,8 @@ export const Router=()=>{
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/' Component={Form1} />
+                <Route path='/' Component={Home}/>
+                <Route path='/step1' Component={Form1} />
                 <Route path='/step2' Component={Form2}/>
                 <Route path='/step3' Component={Form3}/>
                 <Route path='/step4' Component={Form4}/>
