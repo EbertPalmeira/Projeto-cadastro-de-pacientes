@@ -29,16 +29,16 @@ db.connect(err => {
 
 // Rota POST para receber dados do React
 app.post('/api/pacientes', (req, res) => {
-  const { nome, idade,sexo,numCartaoSUS,motivoConsulta } = req.body;
+  const { nome, idade,sexo,numCartaoSUS,motivoConsulta,queixas,alergia,historicoDoencas,fumante,bebidaAlcoolica} = req.body;
 
-  const query = 'INSERT INTO pacientes (nome, idade,sexo,numCartaoSUS,motivoConsulta) VALUES (?, ?, ? , ? , ? )';
+  const query = 'INSERT INTO pacientes (nome, idade,sexo,numCartaoSUS,motivoConsulta, queixas,alergia,historicoDoencas,fumante,bebidaAlcoolica) VALUES ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? )';
   
-  db.query(query, [nome, idade,sexo ,numCartaoSUS ,motivoConsulta], (err, results) => {
+  db.query(query, [nome, idade,sexo ,numCartaoSUS ,motivoConsulta,queixas,alergia,historicoDoencas,fumante,bebidaAlcoolica], (err, results) => {
     if (err) {
       console.error('Erro ao inserir no banco de dados:', err);
       return res.status(500).json({ error: err.message });
     }
-    res.status(201).json({ id: results.insertId, nome, idade ,sexo,numCartaoSUS ,motivoConsulta });
+    res.status(201).json({ id: results.insertId, nome, idade ,sexo,numCartaoSUS ,motivoConsulta,queixas,alergia,historicoDoencas,fumante,bebidaAlcoolica});
   });
 });
 

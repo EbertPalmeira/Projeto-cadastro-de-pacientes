@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
-import  axios  from "axios";
-import Swal from 'sweetalert2';
+
 
 
 function Form5() {
@@ -14,23 +13,11 @@ function Form5() {
 
   const { nome , idade,sexo,numCartaoSUS } = location.state as { nome: string ,idade: string,sexo:string,numCartaoSUS:number};
 
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    try {
-      await axios.post('http://localhost:5000/api/pacientes', { nome, idade ,sexo,numCartaoSUS ,motivoConsulta});
-      
-    } catch (error) {
-      console.error('Erro ao enviar os dados', error);
-    }
-    
-
+    navigate('/step6',{state:{nome,idade,sexo,numCartaoSUS,motivoConsulta}})
   };
 
-  const handleBack=()=>{
-    // navigate('/step6')
-  }
 
   return (
     <Theme>

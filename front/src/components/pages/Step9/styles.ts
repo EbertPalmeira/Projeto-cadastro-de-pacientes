@@ -16,27 +16,8 @@ export const Container = styled.div`
         background-color:#16195c;
         margin:30px 0;
     }
-    label{
-        font-size:13px;
-        font-weight:bold;
-        
-        textarea{
-            display:block;
-            margin-top:7px;
-            box-sizing:border-box;
-            width:90%;
-            padding:20px 10px;
-            border:2px solid #25cd89;
-            border-radius:10px;
-            color:#fff;
-            outline:0;
-            font-size:15px;
-            background-color:#02044a;
-            // resize: 'vertical'
-            
-        }
-    }
-    button{
+    
+    .btn{
         background-color:#25cd89;
         color:#fff;
         cursor:pointer;
@@ -47,9 +28,10 @@ export const Container = styled.div`
         border-radius:30px;
         margin-top:30px;
     }
-        .btn-pag{
-            display:flex;
-            gap:30px;
+    
+   
         
-        }
+
+    
+    }
 `;

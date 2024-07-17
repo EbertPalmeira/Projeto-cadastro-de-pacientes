@@ -33,12 +33,7 @@ function Form3() {
       });
       return
     }
-    // try {
-    //   await axios.post('http://localhost:5000/api/pacientes', { nome, idade,sexo});
-      
-    // } catch (error) {
-    //   console.error('Erro ao enviar os dados', error);
-    // }
+    
 
     navigate('/step4',{state:{nome, idade,sexo}})
     console.log(sexo);
@@ -55,24 +50,24 @@ function Form3() {
 
 
           <div className='container'>
-            <button className={sexo ==="Masculino"? 'selected':''} value="Masculino" onClick={handleButtonClick}>
+            <button type='button' className={sexo ==="Masculino"? 'selected':''} value="Masculino" onClick={handleButtonClick}>
               Masculino
             </button>
-            <button className={sexo ==="Feminino"? 'selected':''} value="Feminino" onClick={handleButtonClick}>
+            <button type='button' className={sexo ==="Feminino"? 'selected':''} value="Feminino" onClick={handleButtonClick}>
               Feminino
             </button>
-            <button className={sexo === "transgenero" ? 'selected' : ''} value="transgenero" onClick={handleButtonClick}>
+            <button type='button' className={sexo === "transgenero" ? 'selected' : ''} value="transgenero" onClick={handleButtonClick}>
               Transgênero
             </button>
-            <button className={sexo === "nao-binario" ? 'selected' : ''} value="nao-binario" onClick={handleButtonClick}>
+            <button type='button' className={sexo === "nao-binario" ? 'selected' : ''} value="nao-binario" onClick={handleButtonClick}>
               Não-binário
             </button>
-            <button className={sexo === "Prefere-não-informar" ? 'selected' : ''} value="Prefere-não-informar" onClick={handleButtonClick}>
+            <button type='button' className={sexo === "Prefere-não-informar" ? 'selected' : ''} value="Prefere-não-informar" onClick={handleButtonClick}>
               Prefere não informar
             </button>
             
           </div>
-          <button className='btn' onClick={handleSubmit}>Próximo</button>
+          <button type='submit' className='btn' onClick={handleSubmit}>Próximo</button>
         
     </C.Container>
     </Theme>

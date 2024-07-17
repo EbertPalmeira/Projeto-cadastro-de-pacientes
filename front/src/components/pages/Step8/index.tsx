@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import { Theme } from '../../../Theme';
-import * as C from './styles';
+import * as C from '../Step7/styles';
 import  axios  from "axios";
 
 
-function Form6() {
+function Form8() {
   const navigate = useNavigate()
-  const [queixas, setQueixas] = useState('');
+  const [historicoDoencas, setHistoricoDoencas] = useState('');
 
   const location = useLocation();
 
-  const { nome , idade,sexo,numCartaoSUS,motivoConsulta } = location.state as { nome: string ,idade: string,sexo:string,numCartaoSUS:number,motivoConsulta:string};
+  const { nome , idade,sexo,numCartaoSUS,motivoConsulta,queixas,alergia } = 
+    location.state as { nome: string ,idade: string,sexo:string,numCartaoSUS:number,
+    motivoConsulta:string, queixas:string,alergia:string};
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    navigate('/step7',{state:{nome,idade,sexo,numCartaoSUS,motivoConsulta,queixas}})
+    navigate('/step9',{state:{nome,idade,sexo,numCartaoSUS,motivoConsulta,queixas,alergia,historicoDoencas}})
+  
     
   };
 
@@ -26,17 +29,17 @@ function Form6() {
         <C.Container>
 
         <p>Passo 1/X</p>
-        <h1>Informe alguma queixa.</h1>
+        <h1>Agora vamos informar o historico doentio do paciente</h1>
         <p>Preecha o campo abaixo.</p>
 
         <form onSubmit={handleSubmit}>
         <div>
             <label>
-            Escreva abaixo a queixa.
+            Informe o historico de doenças do pacientes
             <textarea
-                value={queixas}
-                onChange={(e) => setQueixas(e.target.value)}
-                placeholder='Informe a queixa'
+                value={historicoDoencas}
+                onChange={(e) => setHistoricoDoencas(e.target.value)}
+                placeholder='Informe o historico de doenças do pacientes'
                 
 
             />
@@ -53,4 +56,4 @@ function Form6() {
   );
 }
 
-export default Form6;
+export default Form8;

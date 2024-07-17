@@ -6,7 +6,12 @@ import { useState } from 'react';
 import Form4 from './components/pages/Step4';
 import Form5 from './components/pages/Step5';
 import Home from './components/pages/Home';
+import Form6 from './components/pages/Step6';
+import Form7 from './components/pages/Step7';
+import Form8 from './components/pages/Step8';
 
+import Form9 from './components/pages/Step9';
+import Form10 from './components/pages/Step10';
 
 
 
@@ -21,6 +26,11 @@ export const Router=()=>{
                 <Route path='/step3' Component={Form3}/>
                 <Route path='/step4' Component={Form4}/>
                 <Route path='/step5' Component={Form5}/>
+                <Route path='/step6' Component={Form6}/>
+                <Route path='/step7' Component={Form7}/>
+                <Route path='/step8' Component={Form8}/>
+                <Route path='/step9' Component={Form9}/>
+                <Route path='/step10' Component={Form10}/>
             </Routes>
         </BrowserRouter>
     )
