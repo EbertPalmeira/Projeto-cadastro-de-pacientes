@@ -19,6 +19,10 @@ function Form6() {
     
   };
 
+  const handleNot=()=>{
+    setQueixas('Não ha queixas')
+  }
+
 
 
   return (
@@ -37,14 +41,14 @@ function Form6() {
                 value={queixas}
                 onChange={(e) => setQueixas(e.target.value)}
                 placeholder='Informe a queixa'
-                
+                required
 
             />
             </label>
         </div>
         <div className='btn-pag'>
             <button type="submit">Próximo</button>
-            <button >Voltar</button>
+            <button onClick={handleNot} type='button' >Não há queixas</button>
         </div>
         </form>
        

@@ -3,7 +3,8 @@ import { useNavigate,useLocation } from 'react-router-dom';
 import { Theme } from '../../../Theme';
 import * as C from '../Step9/styles';
 import '../Step9/styles.css'
-import axios from 'axios';
+import Swal from 'sweetalert2';
+
 
 function Form9() {
   const navigate = useNavigate()
@@ -23,14 +24,17 @@ function Form9() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if(fumante ===""){
+      Swal.fire({
+        title: 'Alerta!',
+        text: 'Informe paciente se o paciente e fumante ou não.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
+    return
+  };
     navigate('/step10',{state:{nome,idade,sexo,numCartaoSUS,motivoConsulta,queixas,alergia,historicoDoencas,fumante}})
-    // try {
-    //   await axios.post('http://localhost:5000/api/pacientes', { nome, idade ,sexo,numCartaoSUS ,motivoConsulta,queixas,alergia,historicoDoencas,fumante});
     
-      
-    // } catch (error) {
-    //   console.error('Erro ao enviar os dados', error);
-    // }
   };
 
 

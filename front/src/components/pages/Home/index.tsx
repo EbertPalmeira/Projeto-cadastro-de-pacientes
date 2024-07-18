@@ -14,6 +14,10 @@ const Home = () => {
     navigate("/step1")
   }
 
+  const verPacientesCadastrados=()=>{
+    navigate('/pacientes')
+;  }
+
   return (
     <div>
         <C.Container>
@@ -35,7 +39,7 @@ const Home = () => {
                         <img src={imgVer} alt="" />
                         <p>Este campo é destinado para ver dados de pacientes já cadastrador</p>
                         <div>
-                          <button>Ver pacientes</button>
+                          <button onClick={verPacientesCadastrados}>Ver pacientes</button>
                         </div>
 
                     </div>

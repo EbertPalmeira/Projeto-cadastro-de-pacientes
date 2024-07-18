@@ -12,6 +12,7 @@ import Form8 from './components/pages/Step8';
 
 import Form9 from './components/pages/Step9';
 import Form10 from './components/pages/Step10';
+import VerPacientes from './components/pages/VerPacientes';
 
 
 
@@ -21,6 +22,7 @@ export const Router=()=>{
         <BrowserRouter>
             <Routes>
                 <Route path='/' Component={Home}/>
+                <Route path='/pacientes' Component={VerPacientes}/>
                 <Route path='/step1' Component={Form1} />
                 <Route path='/step2' Component={Form2}/>
                 <Route path='/step3' Component={Form3}/>

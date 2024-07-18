@@ -21,6 +21,9 @@ function Form8() {
   
     
   };
+  const handleNot=()=>{
+    setHistoricoDoencas('Não possui historico doentio')
+  }
 
 
 
@@ -47,7 +50,7 @@ function Form8() {
         </div>
         <div className='btn-pag'>
             <button type="submit">Próximo</button>
-            <button >Voltar</button>
+            <button onClick={handleNot} type='button'>Não tem historico doentio</button>
         </div>
         </form>
        

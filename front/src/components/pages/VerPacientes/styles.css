@@ -1,0 +1,15 @@
+.div{
+    display: grid;
+    grid-template-columns: repeat(3,450px); 
+     justify-content: center;
+     text-align: center;
+     margin-top: 50px;
+} 
+
+.paciente{
+    display: grid;
+    justify-content: center;
+}
+.paciente :nth-child(2){
+    color: red;
+}

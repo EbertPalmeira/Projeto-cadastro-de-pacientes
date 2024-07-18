@@ -10,7 +10,7 @@ function Form1() {
 
 
   const handleNext = () => {
-    if( nome === ""){
+    if( nome === "" ){
       Swal.fire({
         title: 'Alerta!',
         text: 'Informe o nome completo do paciente',
@@ -19,6 +19,7 @@ function Form1() {
       });
       return
     }
+
    navigate('/step2',{state:{nome}});
   };
 

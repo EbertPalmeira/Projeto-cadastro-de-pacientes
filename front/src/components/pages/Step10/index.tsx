@@ -25,6 +25,15 @@ function Form10() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if(bebidaAlcoolica ===""){
+      Swal.fire({
+        title: 'Alerta!',
+        text: 'Informe paciente se o paciente ingere bebida alcoólica ou não.',
+        icon: 'error',
+        confirmButtonText: 'OK'
+      })
+    return
+  };
     try {
       await axios.post('http://localhost:5000/api/pacientes', { nome, idade ,sexo,numCartaoSUS ,motivoConsulta,queixas,alergia,historicoDoencas,fumante,bebidaAlcoolica});
       Swal.fire({
