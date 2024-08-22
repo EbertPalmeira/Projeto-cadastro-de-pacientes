@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,KeyboardEvent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './index.css'
 import { Theme } from '../../../Theme';
@@ -17,6 +17,12 @@ const Form2: React.FC = () => {
     navigate('/step3',{state:{nome, idade}});
 
   };
+  const handleKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
+    const charCode = event.charCode;
+    if (charCode < 48 || charCode > 57) {
+      event.preventDefault();
+    }
+  };
 
   return (
     <Theme>
@@ -30,11 +36,12 @@ const Form2: React.FC = () => {
             <label>
               Informe a idade :
               <input
-                type="date"
-                min=''
+                type="text"
+                maxLength={3}
                 value={idade}
                 onChange={(e) => setIdade(e.target.value)}
                 required
+                onKeyPress={handleKeyPress}
               />
             </label>
           </div>

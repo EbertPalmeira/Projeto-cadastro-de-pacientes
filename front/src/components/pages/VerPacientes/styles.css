@@ -1,15 +1,20 @@
 .div{
     display: grid;
-    grid-template-columns: repeat(3,450px); 
+    grid-template-columns: repeat(2,450px);
      justify-content: center;
      text-align: center;
-     margin-top: 50px;
+    margin-top: 50px;
+     gap: 20px;
+     margin-bottom: 100px;
 } 
 
 .paciente{
     display: grid;
     justify-content: center;
+    border: 1px solid #000;
+    gap: 20px;
+    text-align: center;
+    padding: 10px;
 }
-.paciente :nth-child(2){
-    color: red;
-}
+
+

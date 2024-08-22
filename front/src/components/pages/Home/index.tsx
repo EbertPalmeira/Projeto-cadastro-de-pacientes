@@ -37,7 +37,7 @@ const Home = () => {
                    
                     <div className='cadastro'>
                         <img src={imgVer} alt="" />
-                        <p>Este campo é destinado para ver dados de pacientes já cadastrador</p>
+                        <p>Este campo é destinado para ver dados de pacientes já cadastrados</p>
                         <div>
                           <button onClick={verPacientesCadastrados}>Ver pacientes</button>
                         </div>
