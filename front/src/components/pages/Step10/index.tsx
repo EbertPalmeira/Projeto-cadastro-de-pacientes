@@ -39,7 +39,7 @@ function Form10() {
     }
 
     try {
-      const response = await axios.post(
+         await axios.post(
         SUPABASE_URL,
         { nome, idade, sexo, numCartaoSUS, motivoConsulta, queixas, alergia, historicoDoencas, fumante, bebidaAlcoolica },
         {

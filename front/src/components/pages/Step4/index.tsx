@@ -2,7 +2,6 @@ import React, { useState,KeyboardEvent  } from 'react';
 import { useNavigate ,useLocation} from 'react-router-dom';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
-import axios from 'axios';
 
 function Form1() {
   const navigate = useNavigate()

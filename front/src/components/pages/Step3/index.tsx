@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate ,useLocation} from 'react-router-dom';
-import axios from 'axios';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
 import './Step3.css'
