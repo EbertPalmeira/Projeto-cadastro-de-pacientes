@@ -1,4 +1,4 @@
-import React from 'react'
+
 import * as C from './styles';
 import imgCadastro from '../../../imgs/cadastro.jpg'
 import imgVer from '../../../imgs/images.jpeg'

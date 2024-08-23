@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
-import axios from 'axios';
+
 
 
 function Form7() {
@@ -22,9 +22,14 @@ function Form7() {
     
   };
 
-const NaoPossuiAlergia=()=>{
+const NaoPossuiAlergia = () =>{
     setAlergia('Não possui alergia')
+ 
+
+    
 }
+console.log(alergia);
+
 
   return (
     <Theme>

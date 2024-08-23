@@ -27,7 +27,7 @@ function VerPacientes() {
 
     
     
-console.log(pacientes);
+
 
     
 

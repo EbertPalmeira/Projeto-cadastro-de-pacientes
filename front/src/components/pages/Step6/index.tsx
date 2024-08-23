@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate,useLocation } from 'react-router-dom';
 import { Theme } from '../../../Theme';
 import * as C from './styles';
-import  axios  from "axios";
+
 
 
 function Form6() {
@@ -20,7 +20,9 @@ function Form6() {
   };
 
   const handleNot=()=>{
-    setQueixas('Não ha queixas')
+    setQueixas('Não ha queixas');
+    
+
   }
 
 
@@ -48,7 +50,7 @@ function Form6() {
         </div>
         <div className='btn-pag'>
             <button type="submit">Próximo</button>
-            <button onClick={handleNot} type='button' >Não há queixas</button>
+            <button  onClick={handleNot} type='button' >Não há queixas</button>
         </div>
         </form>
        

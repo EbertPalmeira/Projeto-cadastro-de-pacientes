@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.2",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
@@ -12,7 +13,7 @@
   "description": "Projeto ubs",
   "main": "app.js",
   "scripts": {
-    "dev":"nodemon",
+    "dev": "nodemon",
     "test": "express, react , typescript,tsx,jsx,mysql"
   },
   "author": "Ebert",
