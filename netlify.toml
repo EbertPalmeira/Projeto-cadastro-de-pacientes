@@ -1,8 +1,11 @@
 [build]
-  publish = "front/build" # ou "front/dist" dependendo da sua configuração
-  command = "npm run build" # ou "yarn build" dependendo do seu gerenciador de pacotes
+  base = "front"
+  publish = "front/build"
+  command = "npm run build"
+
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
