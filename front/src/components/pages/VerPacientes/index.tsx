@@ -65,8 +65,8 @@ function VerPacientes() {
                             { label: 'Queixas', value: paciente.queixas },
                             { label: 'Alergia', value: paciente.alergia },
                             { label: 'Histórico doentio', value: paciente.historicoDoencas },
-                            { label: 'Fumante?', value: paciente.fumante },
-                            { label: 'Ingere bebida alcoólica?', value: paciente.bebidaAlcoolica },
+                            { label: 'Fumante', value: paciente.fumante },
+                            { label: 'Ingere bebida alcoólica', value: paciente.bebidaAlcoolica },
                         ].map((item, index) => (
                             <div key={index} className='info-paciente'>
                                 <h2>{item.label}:</h2>
