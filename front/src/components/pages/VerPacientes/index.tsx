@@ -20,6 +20,7 @@ type DescricaoPacientes = {
 
 function VerPacientes() {
     const [pacientes, setPacientes] = useState<DescricaoPacientes[]>([]);
+    const [termoPesquisa, setTermoPesquisa] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -37,10 +38,23 @@ function VerPacientes() {
         fetchData();
     }, []);
 
+    const pacientesFiltrados = pacientes.filter(paciente =>
+        paciente.nome.toLowerCase().includes(termoPesquisa.toLowerCase())
+    );
+
     return (
         <C.Container>
-            <div className='div'>
-                {pacientes.map((paciente) => (
+            <div className='barra-pesquisa'>
+                <input
+                    type="text"
+                    placeholder="Pesquisar pelo nome do paciente..."
+                    value={termoPesquisa}
+                    onChange={(e) => setTermoPesquisa(e.target.value)}
+                />
+            </div>
+
+            <div className='lista-pacientes'>
+                {pacientesFiltrados.map((paciente) => (
                     <div key={paciente.id} className='paciente'>
                         {[
                             { label: 'Nome do paciente', value: paciente.nome },
@@ -54,9 +68,9 @@ function VerPacientes() {
                             { label: 'Fumante?', value: paciente.fumante },
                             { label: 'Ingere bebida alcoólica?', value: paciente.bebidaAlcoolica },
                         ].map((item, index) => (
-                            <div key={index} style={{ display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'center' }}>
-                                <h2 style={{ color: '#000', fontSize: '1.2em' }}>{item.label}:</h2>
-                                <h4 style={{ fontSize: '1.2em' }}>{item.value}</h4>
+                            <div key={index} className='info-paciente'>
+                                <h2>{item.label}:</h2>
+                                <h4>{item.value}</h4>
                             </div>
                         ))}
                     </div>

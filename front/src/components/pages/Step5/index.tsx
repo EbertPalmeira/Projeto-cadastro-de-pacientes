@@ -23,7 +23,7 @@ function Form5() {
     <Theme>
         <C.Container>
 
-        <p>Passo 1/X</p>
+        <p>Passo 5/10</p>
         <h1>Informe o motivo da consulta.</h1>
         <p>Preecha o campo abaixo.</p>
 

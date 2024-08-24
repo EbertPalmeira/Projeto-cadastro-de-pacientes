@@ -27,7 +27,7 @@ function Form1() {
     <Theme>
         <C.Container>
 
-        <p>Passo 1/X</p>
+        <p>Passo 1/10</p>
         <h1>Vamos começar inserindo o nome completo do paciente.</h1>
         <p>Preecha o campo abaixo.</p>
 

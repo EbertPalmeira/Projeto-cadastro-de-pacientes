@@ -43,10 +43,16 @@ const Home = () => {
                         </div>
 
                     </div>
+
+                    
+                    
                 </C.Div>
-            
+                <div className='copy'>
+                      <p>Copyright ©Ebert Palmeira</p>
+                    </div>
             
         </C.Container>
+        
     </div>
   )
 }

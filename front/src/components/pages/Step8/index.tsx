@@ -33,7 +33,7 @@ function Form8() {
     <Theme>
         <C.Container>
 
-        <p>Passo 1/X</p>
+        <p>Passo 8/10</p>
         <h1>Agora vamos informar o historico doentio do paciente</h1>
         <p>Preecha o campo abaixo.</p>
 

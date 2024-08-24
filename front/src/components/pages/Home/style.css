@@ -8,3 +8,10 @@
     cursor: pointer;
     font-size: 15px;
 }
+.copy{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}

@@ -35,7 +35,7 @@ console.log(alergia);
     <Theme>
         <C.Container>
 
-        <p>Passo 1/X</p>
+        <p>Passo 7/10</p>
         <h1>Informe alguma alergia.</h1>
         <p>Preecha o campo abaixo.</p>
 

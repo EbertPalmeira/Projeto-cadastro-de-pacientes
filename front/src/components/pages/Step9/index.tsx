@@ -32,7 +32,7 @@ function Form9() {
         confirmButtonText: 'OK'
       })
     return
-  };
+  }
     navigate('/step10',{state:{nome,idade,sexo,numCartaoSUS,motivoConsulta,queixas,alergia,historicoDoencas,fumante}})
     
   };
@@ -43,7 +43,7 @@ function Form9() {
     <Theme>
         <C.Container>
 
-        <p>Passo 1/X</p>
+        <p>Passo 9/10</p>
         <h1>Agora vamos informar se o paciente fuma</h1>
         <p>Preecha o campo abaixo.</p>
 

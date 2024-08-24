@@ -31,7 +31,7 @@ function Form6() {
     <Theme>
         <C.Container>
 
-        <p>Passo 1/X</p>
+        <p>Passo 6/10</p>
         <h1>Informe alguma queixa.</h1>
         <p>Preecha o campo abaixo.</p>
 

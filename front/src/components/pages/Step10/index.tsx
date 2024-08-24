@@ -73,7 +73,7 @@ function Form10() {
   return (
     <Theme>
       <C.Container>
-        <p>Passo 1/X</p>
+        <p>Passo 10/10</p>
         <h1>Agora vamos informar se o paciente ingere bebida alcoólica</h1>
         <p>Preecha o campo abaixo.</p>
 

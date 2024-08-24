@@ -27,7 +27,7 @@ const Form2: React.FC = () => {
   return (
     <Theme>
       <C.Container>
-      <p>Passo 2/X</p>
+      <p>Passo 2/10</p>
         <h1>Agora vamos inserir a idade do paciente.</h1>
         <p>Preecha o campo abaixo.</p>
 

@@ -43,7 +43,7 @@ function Form3() {
   return (
     <Theme>
       <C.Container>
-      <p>Passo 2/X</p>
+      <p>Passo 3/10</p>
         <h1>Agora vamos informar o sexo do paciente.</h1>
         <p>Preecha o campo abaixo.</p>
 
