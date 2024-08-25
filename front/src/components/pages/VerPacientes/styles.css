@@ -14,6 +14,7 @@
     border: 1px solid #ccc;
     margin: 0 auto;
     display: block;
+    border: 2px solid #02044a;
 }
 
 .lista-pacientes {
@@ -56,4 +57,27 @@
 
 .paciente + .paciente {
     margin-top: 20px;
+}
+.btn-remove button{
+    cursor: pointer;
+     background-color:#02044a;
+     color: #fff;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+.btn-remove button:hover{
+    background-color: #16195c;
+}
+.barra-navegacao{
+    padding: 10px;
+}
+.barra-navegacao button{
+    cursor: pointer;
+    background-color:#02044a;
+     color: #fff;
+     padding: 10px;
+    transition: 0.5s;
+}
+.btn-remove button:hover{
+    background-color: #16195c;
 }

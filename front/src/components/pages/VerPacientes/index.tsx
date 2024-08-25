@@ -2,6 +2,7 @@ import * as C from './styles';
 import '../Step9/styles.css';
 import './styles.css';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import supabase from '../../../supa';
 
 type DescricaoPacientes = {
@@ -21,6 +22,7 @@ type DescricaoPacientes = {
 function VerPacientes() {
     const [pacientes, setPacientes] = useState<DescricaoPacientes[]>([]);
     const [termoPesquisa, setTermoPesquisa] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,12 +40,29 @@ function VerPacientes() {
         fetchData();
     }, []);
 
+    const handleDelete = async (id: number) => {
+        const { error } = await supabase
+            .from('pacientes')
+            .delete()
+            .eq('id', id);
+
+        if (error) {
+            console.error('Erro ao deletar paciente:', error);
+        } else {
+            setPacientes(pacientes.filter(paciente => paciente.id !== id));
+        }
+    };
+
     const pacientesFiltrados = pacientes.filter(paciente =>
         paciente.nome.toLowerCase().includes(termoPesquisa.toLowerCase())
     );
 
     return (
         <C.Container>
+            <div className='barra-navegacao'>
+                <button onClick={() => navigate('/')}>Voltar para Home</button>
+            </div>
+
             <div className='barra-pesquisa'>
                 <input
                     type="text"
@@ -73,6 +92,12 @@ function VerPacientes() {
                                 <h4>{item.value}</h4>
                             </div>
                         ))}
+                        <button 
+                            onClick={() => handleDelete(paciente.id)} 
+                            className="btn-remover"
+                        >
+                            Remover
+                        </button>
                     </div>
                 ))}
             </div>
